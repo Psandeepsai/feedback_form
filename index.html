@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Submit Your Feedback</h1>
+    <form method="POST">
+        <textarea name="feedback" rows="4" cols="40" placeholder="Write your feedback..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Feedbacks:</h2>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>{{ feedback }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
